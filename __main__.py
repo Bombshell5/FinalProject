@@ -1,5 +1,5 @@
 import random
-from game.move_actors_action import MoveActorsAction
+#from game.move_actors_action import MoveActorsAction
 from game import constants
 from game.director import Director
 from game.actor import Actor
@@ -15,7 +15,6 @@ from game.obstacles import Obstacles
 from game.bird import Bird
 from game.coins import Coins
 from game.handle_input_action import HandleInputAction
-# from game.control_actors_action import ControlActorsAction
 # from game.handle_collisions_action import HandleCollisionsAction
 # from game.handle_off_screen_action import HandleOffScreenAction
 from game.move_actors_action import MoveActorsAction
@@ -25,25 +24,25 @@ def main():
     
     # create the cast {key: tag, value: list}
     cast = {}
-    cast["bricks"] = []
+    cast["obstacles"] = []
     # TODO: Create bricks here and add them to the list
 
-    for x in range(0, constants.MAX_X, constants.BRICK_WIDTH + 20):
-        for y in range(0, 200, constants.BRICK_HEIGHT + 20):
-            brick = Brick(x,y)
-            cast["bricks"].append(brick)
+    for x in range(0, constants.MAX_X, 50):
+        for y in range(0, 200):
+            obstacle = Obstacles(x,y)
+            cast["bricks"].append(obstacle)
 
 
-    cast["balls"] = []
+    cast["coins"] = []
     # TODO: Create a ball here and add it to the list
-    ball = Ball(400,400)
+    coins = Coins(400,400)
 
-    cast["balls"].append(ball)
+    cast["balls"].append(coins)
 
-    cast["paddle"] = []
+    cast["bird"] = []
     # TODO: Create a paddle here and add it to the list
-    paddle = Paddle(constants.PADDLE_X,constants.PADDLE_Y)
-    cast["paddle"].append(paddle)
+    bird = Bird(50,50)
+    cast["paddle"].append(bird)
 
     # Create the script {key: tag, value: list}
     script = {}

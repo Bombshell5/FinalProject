@@ -27,8 +27,8 @@ class Coins(Actor):
         self.points = 0
         self.set_text("0")
 
-        self.set_height(constants.DEFAULT_SQUARE_LENGTH)
-        self.set_width(constants.DEFAULT_SQUARE_LENGTH)
+        self.set_height(constants.MONEY_HEIGHT)
+        self.set_width(constants.MONEY_WIDTH)
 
         self.reset()
     
@@ -53,8 +53,8 @@ class Coins(Actor):
         self._points = random.randint(1, 10)
         self.set_text(str(self._points))
         
-        x = random.randint(1, constants.MAX_X - 2)
-        y = random.randint(1, constants.MAX_Y - 2)
+        x = random.randint(20, constants.MAX_X - 20)
+        y = random.randint(20, constants.MAX_Y - 20)
         position = Point(x, y)
         self.set_position(position)
 
