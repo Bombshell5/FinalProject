@@ -7,20 +7,20 @@ class HandleInputAction(Action):
         self._input_service = input_service
     
     def execute(self, cast):
-        paddle = cast["paddle"][0]
+        bird = cast["bird"][0]
         self._input_service
 
         # if one of the arrows is pressed
         # change the point of the paddle
-        if self._input_service.is_left_pressed():
-            x = paddle.get_position().get_x()
-            y = paddle.get_position().get_y() 
-            new_x = x - 10
-            new_y = y
-            paddle.set_position(Point(new_x,new_y))
+        if self._input_service.is_up_pressed():
+            x = bird.get_position().get_x()
+            y = bird.get_position().get_y() 
+            new_x = x 
+            new_y = y + 10
+            bird.set_position(Point(new_x,new_y))
         if self._input_service.is_right_pressed():
-            x = paddle.get_position().get_x()
-            y = paddle.get_position().get_y() 
-            new_x = x + 10
-            new_y = y
-            paddle.set_position(Point(new_x,new_y))
+            x = bird.get_position().get_x()
+            y = bird.get_position().get_y() 
+            new_x = x
+            new_y = y + 10
+            bird.set_position(Point(new_x,new_y))

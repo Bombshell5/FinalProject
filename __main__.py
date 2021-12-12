@@ -30,19 +30,19 @@ def main():
     for x in range(0, constants.MAX_X, 50):
         for y in range(0, 200):
             obstacle = Obstacles(x,y)
-            cast["bricks"].append(obstacle)
+            cast["obstacles"].append(obstacle)
 
 
     cast["coins"] = []
     # TODO: Create a ball here and add it to the list
     coins = Coins(400,400)
 
-    cast["balls"].append(coins)
+    cast["coins"].append(coins)
 
     cast["bird"] = []
     # TODO: Create a paddle here and add it to the list
     bird = Bird(50,50)
-    cast["paddle"].append(bird)
+    cast["bird"].append(bird)
 
     # Create the script {key: tag, value: list}
     script = {}
@@ -53,13 +53,13 @@ def main():
     
 
     draw_actors_action = DrawActorsAction(output_service)
-    move_actors_action = MoveActorsAction()
+    #move_actors_action = MoveActorsAction()
     handle_input_action = HandleInputAction(input_service)
 
     # TODO: Create additional actions here and add them to the script
 
     script["input"] = [handle_input_action]
-    script["update"] = [move_actors_action]
+    script["update"] = []
     script["output"] = [draw_actors_action]
 
 

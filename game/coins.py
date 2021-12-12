@@ -13,7 +13,7 @@ class Coins(Actor):
     Attributes: 
         _points (integer): The number of points the food is worth.
     """
-    def __init__(self):
+    def __init__(self, x, y):
         """The class constructor. Invokes the superclass constructor, set's the 
         text and moves the food to a random position within the boundary of the 
         screen.
@@ -29,7 +29,7 @@ class Coins(Actor):
 
         self.set_height(constants.MONEY_HEIGHT)
         self.set_width(constants.MONEY_WIDTH)
-
+        self.set_image(constants.IMAGE_MONEY)
         self.reset()
     
     def get_points(self):

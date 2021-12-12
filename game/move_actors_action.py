@@ -6,7 +6,7 @@ class MoveActorsAction(Action):
         super().__init__()
     
     def execute(self, cast):
-        ball = cast["balls"][0]
+        obstacle = cast["obstacles"]
 
         for group in cast.values():
             for actor in group:
