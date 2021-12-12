@@ -14,7 +14,7 @@ OBSTACLE_HEIGHT = 50
 
 IMAGE_OBSTACLE = os.path.join(os.getcwd(), "./FINALPROJECT/assets/carnivorous-plant.png")
 IMAGE_MONEY = os.path.join(os.getcwd(), "./FINALPROJECT/assets/money.png")
-IMAGE_BIRD = os.path.join(os.getcwd(), "./FINALPROJECT/assets/bird.png")
+IMAGE_BIRD = os.path.join(os.getcwd(), "./FINALPROJECT/assets/bird(3).png")
 
 BIRD_HEIGHT = 30
 BIRD_WIDTH = 30
