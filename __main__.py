@@ -1,6 +1,7 @@
 import random
 #from game.move_actors_action import MoveActorsAction
 from game import constants
+from game import handle_collisions_action
 from game.director import Director
 from game.actor import Actor
 from game.point import Point
@@ -15,8 +16,7 @@ from game.obstacles import Obstacles
 from game.bird import Bird
 from game.coins import Coins
 from game.handle_input_action import HandleInputAction
-# from game.handle_collisions_action import HandleCollisionsAction
-# from game.handle_off_screen_action import HandleOffScreenAction
+#from game.handle_collisions_action import HandleCollisionsAction
 from game.move_actors_action import MoveActorsAction
 
 def main():
@@ -27,8 +27,8 @@ def main():
     cast["obstacles"] = []
     # TODO: Create bricks here and add them to the list
 
-    for x in range(0, constants.MAX_X, 50):
-        for y in range(0,100, 10):
+    for x in range(0, constants.MAX_X, 200):
+        for y in range(0, 350, 150):
             obstacle = Obstacles(x,y)
             cast["obstacles"].append(obstacle)
 
@@ -55,6 +55,7 @@ def main():
     draw_actors_action = DrawActorsAction(output_service)
     move_actors_action = MoveActorsAction()
     handle_input_action = HandleInputAction(input_service)
+    #handle_collisions_action = HandleCollisionsAction()
 
     # TODO: Create additional actions here and add them to the script
 

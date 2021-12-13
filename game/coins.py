@@ -4,7 +4,7 @@ from game.actor import Actor
 from game.point import Point
 
 class Coins(Actor):
-    """the Fish wants to get coins so it can buy a bigger fish tank. The responsibility of
+    """the Bird wants to get coins so it can buy a some delicious food. The responsibility of
     Coins is to keep track of its appearance and position. Coins can move
     around randomly if asked to do so. 
     
@@ -30,25 +30,25 @@ class Coins(Actor):
         self.set_height(constants.MONEY_HEIGHT)
         self.set_width(constants.MONEY_WIDTH)
         self.set_image(constants.IMAGE_MONEY)
-        #self.reset()
+        self.reset()
     
     def get_points(self):
         """Gets the points this food is worth.
         
         Args:
-            self (Food): an instance of Food.
+            self (Coins): an instance of Coins.
         Returns:
-            integer: The points this food is worth.
+            integer: The points the coin is worth.
         """
         return self._points
 
     def reset(self):
         """
-        Resets the food by moving it to a random position within the boundaries
+        Resets the coins by moving it to a random position within the boundaries
         of the screen and reassigning the points to a random number.
         
         Args:
-            self (Food): an instance of Food.
+            self (Coins): an instance of Coins.
         """
         self._points = random.randint(1, 10)
         self.set_text(str(self._points))
