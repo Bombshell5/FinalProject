@@ -10,15 +10,15 @@ DEFAULT_FONT_SIZE = 16
 
 DEFAULT_TEXT_OFFSET = 5
 
-OBSTACLE_WIDTH = 30
-OBSTACLE_HEIGHT = 50
+OBSTACLE_WIDTH = 20
+OBSTACLE_HEIGHT = 20
 
-IMAGE_OBSTACLE = os.path.join(os.getcwd(), "./FINALPROJECT/assets/baby.png")
-IMAGE_MONEY = os.path.join(os.getcwd(), "./FINALPROJECT/assets/coin.png")
-IMAGE_BIRD = os.path.join(os.getcwd(), "./FINALPROJECT/assets/bird.png")
+IMAGE_OBSTACLE = os.path.join(os.getcwd(), "./assets/baby.png")
+IMAGE_MONEY = os.path.join(os.getcwd(), "./assets/coin.png")
+IMAGE_BIRD = os.path.join(os.getcwd(), "./assets/bird.png")
 
-BIRD_HEIGHT = 20
-BIRD_WIDTH = 20
+BIRD_HEIGHT = 15
+BIRD_WIDTH = 15
 
 MONEY_HEIGHT = 15
 MONEY_WIDTH = 15 

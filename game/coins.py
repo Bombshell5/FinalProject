@@ -29,8 +29,8 @@ class Coins(Actor):
 
         self.set_height(constants.MONEY_HEIGHT)
         self.set_width(constants.MONEY_WIDTH)
-        #self.set_image(constants.IMAGE_MONEY)
-        self.reset()
+        self.set_image(constants.IMAGE_MONEY)
+        #self.reset()
     
     def get_points(self):
         """Gets the points this food is worth.

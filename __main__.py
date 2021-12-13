@@ -28,14 +28,14 @@ def main():
     # TODO: Create bricks here and add them to the list
 
     for x in range(0, constants.MAX_X, 50):
-        for y in range(0,70, 70):
+        for y in range(0,100, 10):
             obstacle = Obstacles(x,y)
             cast["obstacles"].append(obstacle)
 
 
     cast["coins"] = []
     # TODO: Create a ball here and add it to the list
-    coins = Coins(400,400)
+    coins = Coins(50,50)
 
     cast["coins"].append(coins)
 
