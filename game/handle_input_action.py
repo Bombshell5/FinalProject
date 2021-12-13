@@ -16,11 +16,23 @@ class HandleInputAction(Action):
             x = bird.get_position().get_x()
             y = bird.get_position().get_y() 
             new_x = x 
+            new_y = y - 10
+            bird.set_position(Point(new_x,new_y))
+        if self._input_service.is_down_pressed():
+            x = bird.get_position().get_x()
+            y = bird.get_position().get_y() 
+            new_x = x
             new_y = y + 10
             bird.set_position(Point(new_x,new_y))
         if self._input_service.is_right_pressed():
             x = bird.get_position().get_x()
             y = bird.get_position().get_y() 
-            new_x = x
-            new_y = y + 10
+            new_x = x + 10 
+            new_y = y 
+            bird.set_position(Point(new_x,new_y))
+        if self._input_service.is_left_pressed():
+            x = bird.get_position().get_x()
+            y = bird.get_position().get_y() 
+            new_x = x - 10
+            new_y = y 
             bird.set_position(Point(new_x,new_y))

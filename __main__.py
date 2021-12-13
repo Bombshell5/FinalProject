@@ -28,7 +28,7 @@ def main():
     # TODO: Create bricks here and add them to the list
 
     for x in range(0, constants.MAX_X, 50):
-        for y in range(0, 200):
+        for y in range(0,70, 70):
             obstacle = Obstacles(x,y)
             cast["obstacles"].append(obstacle)
 
@@ -53,13 +53,13 @@ def main():
     
 
     draw_actors_action = DrawActorsAction(output_service)
-    #move_actors_action = MoveActorsAction()
+    move_actors_action = MoveActorsAction()
     handle_input_action = HandleInputAction(input_service)
 
     # TODO: Create additional actions here and add them to the script
 
     script["input"] = [handle_input_action]
-    script["update"] = []
+    script["update"] = [move_actors_action]
     script["output"] = [draw_actors_action]
 
 
